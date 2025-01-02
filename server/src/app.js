@@ -58,6 +58,9 @@ import userRoute from "./routes/user.routes.js";
 import messageRoute from "./routes/message.routes.js";
 import aiRoute from "./routes/googleGemini.routes.js";
 // ----------- Routes declaration ---------
+app.get("/", (req, res) => {
+  res.send("Home page");
+});
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/message", messageRoute);
 app.use("/api/v1/ai", aiRoute);
